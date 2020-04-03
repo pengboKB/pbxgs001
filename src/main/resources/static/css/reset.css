@@ -1,0 +1,50 @@
+/*ALL-PUBLICH*/
+
+
+
+
+/*----------|@初始@|-----------*/
+body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,html{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+/*----------|@初始@|-----------*/
+
+
+
+
+/*----------|@公用@|-----------*/
+a:link{
+	/*color:#333;*/
+}
+a:visited{
+
+}
+a:hover{
+
+}
+a:active{
+
+}
+
+.clearFix{
+	zoom:1;
+}
+.clearFix:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+img{
+	outline: none;
+	border:none;
+}
+.cursor{
+	cursor: pointer;
+}
+body{
+	font-family: Microsoft YaHei
+}
+

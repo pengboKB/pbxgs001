@@ -1,0 +1,171 @@
+html,body{
+	height:100%;
+	width:100%;
+}
+body{
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00b4ed,endcolorstr=#0070bb,gradientType=0);
+    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00b4ed,endcolorstr=#0070bb,gradientType=0);
+	background:#0071bb;
+    background:-moz-linear-gradient(top, #00b4ed, #0070bb);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#00b4ed), to(#0070bb));
+	background:-o-linear-gradient(top, #00b4ed, #0070bb);
+	position: relative;
+}
+.body_bg{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	height:300px;
+	width:100%;
+	background: url(../images/login/login_bg.png) no-repeat;
+	z-index: 1;
+}
+#login_box{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 489px;
+	height: 580px;
+	margin: auto;
+	z-index: 2;
+}
+.login_title{
+	height:80px;
+	font-size: 18px;
+	color:#fff;
+	text-align: center;
+}
+.login_title .f_blod{
+	font-size: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+.login_content{
+	height:498px;
+	width: 489px;
+	background: #fff;
+	border-radius: 5px;
+}
+.login_content h1{
+	height:110px;
+	padding-top: 45px;
+	text-align: center;
+}
+
+#login_form{
+	display: block;
+	height:330px;
+	width: 337px;
+	padding:0 76px;
+}
+.form_group{
+	height:40px;
+	padding-top: 15px;
+	position: relative;
+}
+.form_group input.hasIcon{
+	height:40px;
+	line-height: 40px;
+	width: 280px;
+	border:1px solid #c3ced8;
+	padding-left: 45px;
+	padding-right: 12px;
+	border-radius: 5px;
+	color:#b2b2b2;
+}
+#verification_code_text{
+	display: inline-block;
+	float: left;
+	height:40px;
+	line-height: 40px;
+	width: 166px;
+	border:1px solid #c3ced8;
+	padding:0 12px;
+	border-radius: 5px;
+	color:#b2b2b2;
+}
+#verification_code{
+	display: inline-block;
+	float: right;
+	height:40px;
+	line-height: 40px;
+	width:105px;
+	border:1px solid #c3ced8;
+	padding:0 10px;
+	border-radius: 5px;
+	color:#b2b2b2;
+	color:#0b56b5;
+	font-weight: bold;
+	font-style: oblique;
+}
+.form_group_hover:hover input.hasIcon{
+	border:1px solid #22a7ff;
+}
+
+
+.posIcon{
+	position: absolute;
+	width:22px;
+	height:22px;
+	top:24px;
+	left:13px;
+	display: block;
+}
+.posUsernameIcon{
+	background: url(../images/login/username_n.png) no-repeat;
+}
+.posPasswordIcon{
+	background: url(../images/login/password_n.png) no-repeat;
+}
+
+.form_group_hover:hover .posUsernameIcon{
+	background: url(../images/login/username_h.png) no-repeat;
+}
+.form_group_hover:hover .posPasswordIcon{
+	background: url(../images/login/password_h.png) no-repeat;
+}
+.remember_pass_checkbox{
+	display: inline-block;
+	width:16px;
+	height:16px;
+	
+	border:1px solid #bcc9d4;
+	border-radius: 2px;
+	margin-top: 5px;
+}
+.remember_pass{
+	display: inline-block;
+	height:16px;
+	line-height: 16px;
+	color:#999;
+	padding-left: 10px;
+	font-size: 14px;
+}
+#login_btn{
+	display: block;
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	cursor: pointer;
+	border:none;
+	background: #faa600;
+	border-radius: 5px;
+	color:#fff;
+}
+#login_a{
+	display: block;
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	cursor: pointer;
+	border:none;
+	background: #faa600;
+	border-radius: 5px;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网站应用系统保密检查管理平台V1.1</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="网站应用系统保密检查管理平台V1.1">
+	<meta name="keyword" content="网站应用系统保密检查管理平台V1.1">
+	<meta name="author" content="网站应用系统保密检查管理平台V1.1">
+	<link rel="stylesheet" href="css/reset.css">  
+	<link rel="stylesheet" href="css/style.css">  
+	<link rel="stylesheet" href="css/calendar.css"> 
+
+</head>
+<body>
+	<div id="box_adaption">
+		<div id="header" class="clearFix">
+			<div class="logo_box clearFix">
+				<div class="logo_img"><img src="images/index/logo.png" alt=""></div>
+				<div class="logo_txt">
+					<h2>网站应用系统保密检查管理平台V1.1</h2>
+					<p>Web system security Inspector manage platform V1.1</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="clearFix">
+					<li class="jcgl"><a href="index.html">任务管理</a><span class="nav_line"></span></li>
+					<li class="wjgl"><a href="fileManagement.html">文件管理</a></li>
+					<li class="gjz last_no_r"><a href="keyword.html">关键字</a></li>
+				</ul>
+			</div>
+			<div class="relevant_info">
+				<ul class="clearFix">
+					<li class="user_show">
+						登录者 <span class="arrow_down"></span>
+						<ul class="user_do">
+							<li class="changePass">修改密码</li>
+							<li><a href="login.html">退出</a></li>
+						</ul>
+					</li>
+					<li class="aboutus">关于我们</li>
+					<li class="help">帮助</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="func_column">
+				<div class="all_filter clearFix">
+					<div class="filer_check_time">
+						<span>检测时间</span> <input type="text" name="filer_check_begintime" class="filer_check_begintime"> - <input type="text" name="filer_check_finishtime" class="filer_check_finishtime">
+						<div id="filer_check_begintime_calendar"></div>
+						<div id="filer_check_finishtime_calendar"></div>
+					</div>
+					<div class="filer_name_address">
+						<span>名称/地址</span> <input type="text" name="filer_name_address" placeholder="输入任务名称，地址模糊查询">
+					</div>
+					<div class="filer_keyword">
+						<span>关键字</span> <input type="text" name="filer_keyword" placeholder="MM，JM">
+					</div>
+					<div class="filer_btn_search">
+						<input type="button" value="查询" id="cx_btn" name="cx_btn">
+					</div>
+				</div>
+			</div>
+			<div class="table_operation clearFix">
+				<div class="table_operation_btn">
+					<input type="button" value="导出报告" name="export_btn" id="export_btn">
+					<input type="button" value="批量删除" name="remove_btn" id="remove_btn">
+					<input type="button" value="添加任务" name="add_btn" id="add_btn">
+				</div>
+				<div class="table_operation_text">
+					共 <span class="total"> 24 </span> 项 ，已完成 <span class="done"> 10 </span> 项
+				</div>
+			</div>
+			
+			<div class="table_content">
+				<div class="table_wrap">
+					<table>
+						<thead>
+							<!-- <tr>
+								<th style="width:5%"><input type="checkbox" name="choose" id="chooseCheckbox"></th>
+								<th style="width:5%">序号</th>
+								<th style="width:10%" style="width:5%">任务名称</th>
+								<th style="width:15%;">地址</th>
+								<th style="width:10%">检查关键字</th>
+								<th style="width:10%">时间段</th>
+								<th style="width:10%">检查状态</th>
+								<th style="width:5%">命中数</th>
+								<th style="width:5%">网页数</th>
+								<th style="width:5%">附件数</th>
+								<th style="width:20%">操作</th>
+							</tr> -->
+							<tr>
+								<th><input type="checkbox" name="choose" id="chooseCheckbox"></th>
+								<th>序号</th>
+								<th>任务名称</th>
+								<th>地址</th>
+								<th>检查关键字</th>
+								<th>时间段</th>
+								<th>检查状态</th>
+								<th>命中数</th>
+								<th>网页数</th>
+								<th>附件数</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>1</td>
+								<td class="align_left"><a href="http://www.baidu.com">百度</a></td>
+								<td class="align_left" title="http://www.baidu.com">http://www.baidu.com</td>
+								<td class="align_left">MM， JM</td>
+								<td></td>
+								<td><span class="not_begin">未开始</span></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_yes">开始检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>2</td>
+								<td class="align_left"><a href="http://10.10.25.234">应用系统</a></td>
+								<td class="align_left">http://10.10.25.234</td>
+								<td class="align_left" title="MM， JM， MJ">MM， JM， MJ</td>
+								<td></td>
+								<td><span class="in_check">检查中</span></td>
+								<td>5</td>
+								<td>1</td>
+								<td>0</td>
+								<td><span class="edit_no edit_task">编辑任务</span> <span class="edit_finish">终止检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>3</td>
+								<td class="align_left"><a href="http://106.38.40.100">OA系统</a></td>
+								<td class="align_left" title="http://106.38.40.100">http://106.38.40.100</td>
+								<td class="align_left">MM， JM</td>
+								<td title="2017/717 12:05:-13:30">2017/7/17 12:05:-13:30</td>
+								<td><span class="check_completed">检查完成</span></td>
+								<td>123</td>
+								<td>32</td>
+								<td>25</td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_beginagain">重新检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>4</td>
+								<td class="align_left"><a href="http://www.baidu.com">百度</a></td>
+								<td class="align_left" title="http://www.baidu.com">http://www.baidu.com</td>
+								<td class="align_left">MM， JM</td>
+								<td></td>
+								<td><span class="not_begin">未开始</span></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_yes">开始检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>5</td>
+								<td class="align_left"><a href="http://10.10.25.234">应用系统</a></td>
+								<td class="align_left">http://10.10.25.234</td>
+								<td class="align_left" title="MM， JM， MJ">MM， JM， MJ</td>
+								<td></td>
+								<td><span class="in_check">检查中</span></td>
+								<td>5</td>
+								<td>1</td>
+								<td>0</td>
+								<td><span class="edit_no edit_task">编辑任务</span> <span class="edit_finish">终止检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>6</td>
+								<td class="align_left"><a href="http://106.38.40.100">OA系统</a></td>
+								<td class="align_left" title="http://106.38.40.100">http://106.38.40.100</td>
+								<td class="align_left">MM， JM</td>
+								<td title="2017/717 12:05:-13:30">2017/7/17 12:05:-13:30</td>
+								<td><span class="check_completed">检查完成</span></td>
+								<td>123</td>
+								<td>32</td>
+								<td>25</td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_beginagain">重新检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>7</td>
+								<td class="align_left"><a href="http://www.baidu.com">百度</a></td>
+								<td class="align_left" title="http://www.baidu.com">http://www.baidu.com</td>
+								<td class="align_left">MM， JM</td>
+								<td></td>
+								<td><span class="not_begin">未开始</span></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_yes">开始检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>8</td>
+								<td class="align_left"><a href="http://10.10.25.234">应用系统</a></td>
+								<td class="align_left">http://10.10.25.234</td>
+								<td class="align_left" title="MM， JM， MJ">MM， JM， MJ</td>
+								<td></td>
+								<td><span class="in_check">检查中</span></td>
+								<td>5</td>
+								<td>1</td>
+								<td>0</td>
+								<td><span class="edit_no edit_task">编辑任务</span> <span class="edit_finish">终止检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>9</td>
+								<td class="align_left"><a href="http://106.38.40.100">OA系统</a></td>
+								<td class="align_left" title="http://106.38.40.100">http://106.38.40.100</td>
+								<td class="align_left">MM， JM</td>
+								<td title="2017/717 12:05:-13:30">2017/7/17 12:05:-13:30</td>
+								<td><span class="check_completed">检查完成</span></td>
+								<td>123</td>
+								<td>32</td>
+								<td>25</td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_beginagain">重新检查</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="choose"></td>
+								<td>10</td>
+								<td class="align_left"><a href="http://www.baidu.com">百度</a></td>
+								<td class="align_left" title="http://www.baidu.com">http://www.baidu.com</td>
+								<td class="align_left">MM， JM</td>
+								<td></td>
+								<td><span class="not_begin">未开始</span></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><span class="edit_yes edit_task">编辑任务</span> <span class="edit_yes">开始检查</span></td>
+							</tr>
+						</tbody>	
+					</table>
+					<div class="page">
+						<span> < </span>
+						<span class="checked"> 1 </span>
+						<span> 2 </span>
+						<span> 3 </span>
+						<span> 4 </span>
+						<span class="no_cur"> ... </span>
+						<span> > </span>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<div id="footer"><p>Copyright ©2017 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 版权所有</p> </div>
+		<div class="zzc"></div>
+		<div class="popup">
+			<div class="popup_title"><span class="popup_title_pos"></span> <span class="popup_close" onclick="webSystem.func.closePopup()"></span></div>
+			<div class="popup_con"></div>
+			<div class="func_btn">
+				<button class="cancel" onclick="webSystem.func.closePopup()">取消</button>
+				<button class="save" onclick="webSystem.func.closePopup()">保存</button>
+				<button class="sure" onclick="webSystem.func.closePopup()">确定</button>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</body>	
+</html>

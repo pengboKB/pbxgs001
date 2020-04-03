@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网站应用系统保密检查管理平台V1.1</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="网站应用系统保密检查管理平台V1.1">
+	<meta name="keyword" content="网站应用系统保密检查管理平台V1.1">
+	<meta name="author" content="网站应用系统保密检查管理平台V1.1">
+	<link rel="stylesheet" href="css/reset.css">  
+	<link rel="stylesheet" href="css/style.css">  
+
+</head>
+<body>
+	<div id="box_adaption">
+		<div id="header" class="clearFix">
+			<div class="logo_box clearFix">
+				<div class="logo_img"><img src="images/index/logo.png" alt=""></div>
+				<div class="logo_txt">
+					<h2>网站应用系统保密检查管理平台V1.1</h2>
+					<p>Web system security Inspector manage platform V1.1</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="clearFix">
+					<li class="jcgl"><a href="index.html">任务管理</a></li>
+					<li class="wjgl"><a href="fileManagement.html">文件管理</a></li>
+					<li class="gjz last_no_r"><a href="keyword.html">关键字</a><span class="nav_line"></span></li>
+				</ul>
+			</div>
+			<div class="relevant_info">
+				<ul class="clearFix">
+					<li class="user_show">
+						登录者 <span class="arrow_down"></span>
+						<ul class="user_do">
+							<li class="changePass">修改密码</li>
+							<li><a href="login.html">退出</a></li>
+						</ul>
+					</li>
+					<li class="aboutus">关于我们</li>
+					<li class="help">帮助</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="func_column">
+				<div class="keyword_btns">
+					<button class="add_keyword">添加关键字</button>
+					<button class="export_keyword">导入关键字</button>
+				</div>
+				<div class="keyword_search">
+					<input type="text" placeholder="MM，JM">
+					<button>查询</button>
+				</div>
+			</div>
+			<div class="keyword_page_content">
+				<div class="keyword_page_title">关键字列表</div>
+				<div class="keyword_page_list">
+					<span class="keyword_list_one">中华人名共和国 </span>
+					<span class="keyword_list_one">犯我中华者虽远必诛</span>
+					<span class="keyword_list_one">扶贫通知</span>
+					<span class="keyword_list_one">中办</span>
+					<span class="keyword_list_one">中华人名共和国</span>
+					<span class="keyword_list_one">犯我中华者虽远必诛</span>
+					<span class="keyword_list_one">扶贫通知</span>
+					<span class="keyword_list_one">中办</span>
+					<span class="keyword_list_one">中华人名共和国</span>
+					<span class="keyword_list_one">犯我中华者虽远必诛</span>
+					<span class="keyword_list_one">扶贫通知</span>
+					<span class="keyword_list_one">中办</span>
+				</div>
+			</div>
+		</div>
+		<div id="footer"><p>Copyright ©2017 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 版权所有</p> </div>
+		<div class="zzc"></div>
+		<div class="popup">
+			<div class="popup_title"><span class="popup_title_pos"></span> <span class="popup_close" onclick="webSystem.func.closePopup()"></span></div>
+			<div class="popup_con"></div>
+			<div class="func_btn">
+				<button class="cancel" onclick="webSystem.func.closePopup()">取消</button>
+				<button class="save" onclick="webSystem.func.closePopup()">保存</button>
+				<button class="sure" onclick="webSystem.func.closePopup()">确定</button>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</body>	
+</html>
